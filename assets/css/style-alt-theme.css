@@ -21,7 +21,7 @@
     --scrollbar-color: 255,255,255;
     --scrollbar-accent: 0,0,0;
         
-    --logo-filter: invert(1.0);
+    --logo-filter: invert(0);
     --svg-filter: none;
 }
 

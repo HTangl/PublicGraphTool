@@ -1,24 +1,24 @@
 // Configuration options
-const init_phones = ["IEF Neutral Target"],                             // Optional. Which graphs to display on initial load. Note: Share URLs will override this set
-      DIR = "data_hp/",                                // Directory where graph files are stored
+const init_phones = [],// Optional. Which graphs to display on initial load. Note: Share URLs will override this set
+      DIR = "data/",                                // Directory where graph files are stored
       default_channels = ["L","R"],                 // Which channels to display. Avoid javascript errors if loading just one channel per phone
       default_normalization = "dB",                 // Sets default graph normalization mode. Accepts "dB" or "Hz"
       default_norm_db = 60,                         // Sets default dB normalization point
-      default_norm_hz = 1000,                       // Sets default Hz normalization point (500Hz is recommended by IEC)
+      default_norm_hz = 1000,                        // Sets default Hz normalization point (500Hz is recommended by IEC)
       max_channel_imbalance = 5,                    // Channel imbalance threshold to show ! in the channel selector
       alt_layout = true,                            // Toggle between classic and alt layouts
       alt_sticky_graph = true,                      // If active graphs overflows the viewport, does the graph scroll with the page or stick to the viewport?
-      alt_animated = true,                          // Determines if new graphs are drawn with a 1-second animation, or appear instantly
+      alt_animated = false,                          // Determines if new graphs are drawn with a 1-second animation, or appear instantly
       alt_header = true,                            // Display a configurable header at the top of the alt layout
       alt_tutorial = true,                          // Display a configurable frequency response guide below the graph
       site_url = '/',                               // URL of your graph "homepage"
       share_url = true,                             // If true, enables shareable URLs
-      watermark_text = "HarutoHiroki",              // Optional. Watermark appears behind graphs
-      watermark_image_url = "assets/images/haruto.svg",   // Optional. If image file is in same directory as config, can be just the filename
-      page_title = "HarutoHiroki",                  // Optional. Appended to the page title if share URLs are enabled
-      page_description = "View and compare frequency response graphs for headphones.",
-      accessories = true,                           // If true, displays specified HTML at the bottom of the page. Configure further below
-      externalLinksBar = true,                      // If true, displays row of pill-shaped links at the bottom of the page. Configure further below
+      watermark_text = "30db Y-Scale!",              // Optional. Watermark appears behind graphs
+      watermark_image_url = "assets/images/prince.png", // Optional. If image file is in same directory as config, can be just the filename
+      page_title = "Hadoe Graphtool",                  // Optional. Appended to the page title if share URLs are enabled
+      page_description = "Buy Nightjar Singularity",
+      accessories = false,                           // If true, displays specified HTML at the bottom of the page. Configure further below
+      externalLinksBar = false,                      // If true, displays row of pill-shaped links at the bottom of the page. Configure further below
       expandable = false,                           // Enables button to expand iframe over the top of the parent page
       expandableOnly = false,                       // Prevents iframe interactions unless the user has expanded it. Accepts "true" or "false" OR a pixel value; if pixel value, that is used as the maximum width at which expandableOnly is used
       headerHeight = '0px',                         // Optional. If expandable=true, determines how much space to leave for the parent page header
@@ -31,37 +31,29 @@ const init_phones = ["IEF Neutral Target"],                             // Optio
       extraEnabled = true,                          // Enable extra features
       extraUploadEnabled = true,                    // Enable upload function
       extraEQEnabled = true,                        // Enable parametic eq function
-      extraEQBands = 10,                            // Default EQ bands available
-      extraEQBandsMax = 20,                         // Max EQ bands available
-      num_samples = 5,                              // Number of samples to average for smoothing
-      scale_smoothing = 0.2;                        // Smoothing factor for scale transitions
-      
+      extraEQBands = 5,                            // Default EQ bands available
+      extraEQBandsMax = 20;                         // Max EQ bands available
 
 // Specify which targets to display
 const targets = [
-    { type:"Neutral",    files:["KEMAR DF", "IEF Neutral"] },
-    { type:"Community",   files:["Listener Tilt 711"] },
-    { type:"Preference", files:["Harman Combined", "Harman 2018 OE", "Harman 2015 OE", "Harman 2013 OE"] }
+    { files:["Generic JM-1 10dB", "Hadoe 711 IEM"] }
 ];
 
 // Haruto's Addons
 const  preference_bounds = "assets/images/bounds.png", // Preference bounds image
-       PHONE_BOOK = "phone_book_hp.json",            // Phone book file path & name
-       default_DF_name = "KEMAR DF",                 // Default RAW DF name
-       dfBaseline = false,                           // If true, DF is used as baseline when custom df tilt is on
-       default_bass_shelf = 8,                      // Default Custom DF bass shelf value
-       default_tilt = -0.8,                         // Default Custom DF tilt value
+       PHONE_BOOK = "phone_book.json",              // Path to phone book JSON file
+       default_DF_name = "Diffuse Field",           // Default RAW DF name
+       dfBaseline = true,                           // If true, DF is used as baseline when custom df tilt is on
+       default_bass_shelf = 0,                      // Default Custom DF bass shelf value
+       default_tilt = -1.0,                         // Default Custom DF tilt value
        default_ear = 0,                             // Default Custom DF ear gain value
        default_treble = 0,                          // Default Custom DF treble gain value
-       tiltableTargets = ["KEMAR DF"];               // Targets that are allowed to be tilted
-
+       tiltableTargets = ["Diffuse Field"];         // Targets that are allowed to be tilted
 
 
 // *************************************************************
 // Functions to support config options set above; probably don't need to change these
 // *************************************************************
-
-// But I will anyways haha - Haruto
 
 // Set up the watermark, based on config options above
 function watermark(svg) {
@@ -90,7 +82,7 @@ function watermark(svg) {
         .attr("opacity",0.2)
         .append("text")
         .attrs({x:765, y:314, "font-size":10, "text-anchor":"end", "class":"site_name"})
-        .text("graphtool.harutohiroki.com");
+        .text("squig.sashaserver.us");
 }
 
 
@@ -134,7 +126,7 @@ setLayout();
 const 
     // Short text, center-aligned, useful for a little side info, credits, links to measurement setup, etc. 
     simpleAbout = `
-        <p class="center">This web software is based on the <a href="https://github.com/mlochbaum/CrinGraph">CrinGraph</a> open source software project. <a href="https://www.teachmeaudio.com/mixing/techniques/audio-spectrum">Audio Spectrum</a> definition source.</p>
+    <p class="center">This web software is based on the <a href="https://github.com/mlochbaum/CrinGraph">CrinGraph</a> open source software project. <a href="https://www.teachmeaudio.com/mixing/techniques/audio-spectrum">Audio Spectrum</a> definition source.</p>
     `,
     // Which of the above variables to actually insert into the page
     whichAccessoriesToUse = simpleAbout;
@@ -151,18 +143,6 @@ const linkSets = [
                 url: "https://iems.audiodiscourse.com/"
             },
             {
-                name: "Bad Guy",
-                url: "https://hbb.squig.link/"
-            },
-            {
-                name: "Banbeucmas",
-                url: "https://banbeu.com/graph/tool/"
-            },
-            {
-                name: "HypetheSonics",
-                url: "https://www.hypethesonics.com/iemdbc/"
-            },
-            {
                 name: "In-Ear Fidelity",
                 url: "https://crinacle.com/graphs/iems/graphtool/"
             },
@@ -175,12 +155,8 @@ const linkSets = [
                 url: "https://squig.link/"
             },
             {
-                name: "Timmy (Gizaudio)",
+                name: "Timmy",
                 url: "https://timmyv.squig.link/"
-            },
-            {
-                name: "Rohsa",
-                url: "https://rohsa.gitlab.io/graphtool/"
             },
         ]
     },
@@ -194,6 +170,10 @@ const linkSets = [
             {
                 name: "In-Ear Fidelity",
                 url: "https://crinacle.com/graphs/headphones/graphtool/"
+            },
+            {
+                name: "Listener",
+                url: "https://listener800.github.io/"
             },
             {
                 name: "Super* Review",
@@ -221,30 +201,27 @@ setupGraphAnalytics();
 
 
 // If alt_header is enabled, these are the items added to the header
-let headerLogoText = "HarutoHiroki",
-    headerLogoImgUrl = "assets/images/haruto.svg",
+let headerLogoText = "Hadoe",
+    headerLogoImgUrl = "assets/images/prince2.svg",
     headerLinks = [
     {
-        name: "Home",
-        url: "https://harutohiroki.com"
+        name: "IEMs",
+        url: "https://squig.sashaserver.us"
     },
     {
-        name: "Ranking",
-        url: "https://docs.google.com/spreadsheets/d/1DZTac1BxCLdmS2J4DDQyvKSVUZGnNhz2r86qMGcs_Jo/edit?pli=1#gid=330037169"
+        name: "Headphones",
+        url: "https://squig.sashaserver.us/headphones.html"
     },
     {
-        name: "Discord",
-        url: "https://discord.harutohiroki.com"
+        name: "Earbuds",
+        url: "https://squig.sashaserver.us/earbuds.html"
     },
     {
-        name: "Donate",
-        url: "https://www.paypal.me/harutohirokiUS"
+        name: "Transducer Ratings",
+        url: "https://docs.google.com/spreadsheets/d/1rcCr-MaECY-v7PZZGxh9vilR6QL7bnObpu-mgfWj8Xg/edit?usp=sharing"
     },
-//  {
-//      name: "GitHub",
-//      url: "https://github.com/HarutoHiroki"
-//  },
 ];
+
 
 // Source: https://www.teachmeaudio.com/mixing/techniques/audio-spectrum
 let tutorialDefinitions = [
@@ -276,11 +253,31 @@ let tutorialDefinitions = [
     {
         name: 'Presence',
         width: '5.9%',
-        description: 'The presence range is responsible for the clarity and definition of a sound. Over-boosting can cause an irritating, harsh sound. Cutting in this range makes the sound more distant and transparent.'
+        description: 'The Presence range is responsible for the clarity and definition of a sound. Over-boosting can cause an irritating, harsh sound. Cutting in this range makes the sound more distant and transparent.'
     },
     {
-        name: 'Brilliance',
+        name: 'Treble',
         width: '17.4%',
-        description: 'The brilliance range is composed entirely of harmonics and is responsible for sparkle and air of a sound. Over boosting in this region can accentuate hiss and cause ear fatigue.'
+        description: 'The Treble range is composed entirely of harmonics and is responsible for sparkle and air of a sound. Over boosting in this region can accentuate hiss and cause ear fatigue.'
     }
 ]
+
+// o == offset
+// l ==
+// p == phone
+// id == name
+// lr == default curve
+// v == valid channels
+/*
+let phoneObj = {
+                    isTarget: false,
+                    brand: "Average",
+                    dispName: "All SPL",
+                    phone: "All SPL",
+                    fullName: "Average All SPL",
+                    fileName: "Average All SPL",
+                    rawChannels: "R",
+                    isDynamic: false,
+                    id: "AVG"
+                };
+*/

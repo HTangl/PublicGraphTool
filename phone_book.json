@@ -1,2 +1,119 @@
 [
+    {
+        "name": "7th Acoustics",
+        "phones": [
+            {
+                "name": "Supernova",
+                "file": ["7th Acoustics Supernova (AET07)"],
+                "suffix":["(AET07)"],
+                "reviewScore": "3/5"
+            }
+        ]
+    },
+    {
+        "name": "Artti",
+        "phones": [
+            {
+                "name": "R1",
+                "file": ["Artti R1 (AET07)"],
+                "suffix":["(AET07)"],
+                "reviewScore": "4/5"
+            }
+        ]
+    },
+    {
+        "name": "Blon",
+        "phones": [
+            {
+                "name": "Z300",
+                "file": ["Blon Z300 (AET07)"],
+                "suffix":["(AET07)"],
+                "reviewScore": "2/5"
+            }
+        ]
+    },
+    {
+        "name": "Dunu",
+        "phones": [
+            {
+                "name": "Falcon Ultra",
+                "file": ["Dunu Falcon Ultra (Blue Nozzle AET07)"],
+                "suffix":["(Blue Nozzle AET07)"],
+                "reviewScore": "2/5"
+            }
+        ]
+    },
+    {
+        "name": "Hisenior",
+        "phones": [
+            {
+                "name": "Mega5EST",
+                "file": ["Hisenior Mega5EST (AET07)"],
+                "suffix":["(AET07)"],
+                "reviewScore": "4/5"
+            }
+        ]
+    },
+    {
+        "name": "JBL",
+        "phones": [
+            {
+                "name": "Tune 230NC",
+                "file": ["JBL Tune 230NC"],
+                "suffix":[""],
+                "reviewScore": "1/5"
+            }
+        ]
+    },
+    {
+        "name": "Nightjar",
+        "phones": [
+            {
+                "name": "Singularity",
+                "file": ["Nightjar Singularity (Divinus Velvet)", "Nightjar Singularity (Ragnarok AET07)"],
+                "suffix":["(Divinus Velvet)", "(Ragnarok AET07)"],
+                "reviewScore": "5/5"
+            }
+        ]
+    },
+    {
+        "name": "QKZ",
+        "phones": [
+            {
+                "name": "QKZ x HBB",
+                "file": ["QKZ QKZ x HBB (AET07)"],
+                "suffix":["(AET07)"],
+                "reviewScore": "3/5"
+            }
+        ]
+    },
+    {
+        "name": "Samsung",
+        "phones": [
+            {
+                "name": "Galaxy Buds FE",
+                "file": ["Samsung Galaxy Buds FE"],
+                "suffix":[""],
+                "reviewScore": "3/5"
+            }
+        ]
+    },
+    {
+        "name": "Symphonium",
+        "phones": [
+            {
+                "name": "Crimson",
+                "file": ["Symphonium Crimson (AET07)"],
+                "suffix":["(AET07)"],
+                "reviewScore": "2/5"
+            },
+            {
+                "name": "Meteor",
+                "file": ["Symphonium Meteor (AET07)"],
+                "suffix":["(AET07)"],
+                "reviewScore": "2/5"
+            }
+        ]
+    }
+
 ]

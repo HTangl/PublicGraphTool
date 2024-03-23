@@ -99,6 +99,16 @@
         ]
     },
     {
+        "name": "Sony",
+        "phones": [
+            {
+                "name": "WF-C700N",
+                "file": ["Sony WF-C700N"],
+                "suffix":[""]
+            }
+        ]
+    },
+    {
         "name": "Symphonium",
         "phones": [
             {

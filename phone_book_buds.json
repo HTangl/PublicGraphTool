@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Amazon",
+        "phones": [
+            {
+                "name": "Echo Buds 2023",
+                "file": ["Amazon Echo Buds 2023 (Foam)", "Amazon Echo Buds 2023 (Silicone)", "Amazon Echo Buds 2023 (Bare)"],
+                "suffix":["(Foam)", "(Silicone)", "(Bare)"]
+            }
+        ]
+    },
+    {
+        "name": "NiceHCK",
+        "phones": [
+            {
+                "name": "EB2S Pro",
+                "file": ["NiceHCK EB2S Pro"],
+                "suffix":[""]
+            }
+        ]
+    },
+    {
+        "name": "Valphonics",
+        "phones": [
+            {
+                "name": "Valbuds V3",
+                "file": ["Valphonics Valbuds"],
+                "suffix":[""]
+            }
+        ]
+    },
+    {
+        "name": "Vido",
+        "phones": [
+            {
+                "name": "Earbuds",
+                "file": ["Vido Earbuds (Blue)"],
+                "suffix":["(Blue)"]
+            }
+        ]
+    }
+]

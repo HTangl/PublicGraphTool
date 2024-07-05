@@ -1,5 +1,5 @@
 // Configuration options
-const init_phones = [],// Optional. Which graphs to display on initial load. Note: Share URLs will override this set
+const init_phones = ["ISO 11904-2 DF Target", "TGXear Serratus"],// Optional. Which graphs to display on initial load. Note: Share URLs will override this set
       DIR = "data_buds/",                                // Directory where graph files are stored
       default_channels = ["L", "R"],                 // Which channels to display. Avoid javascript errors if loading just one channel per phone
       num_samples = 5,
@@ -37,19 +37,19 @@ const init_phones = [],// Optional. Which graphs to display on initial load. Not
 
 // Specify which targets to display
 const targets = [
-    { type:"Reference", files:["ISO 11904-2 10db", "ISO 11904-2 10db -3EG"] },
+    { type:"Reference", files:["ISO 11904-2 DF", "Hadoe Earbud"] },
 ];
 
 // Haruto's Addons
 const  preference_bounds = "assets/images/bounds.png", // Preference bounds image
        PHONE_BOOK = "phone_book_buds.json",              // Path to phone book JSON file
-       default_DF_name = "Diffuse Field",           // Default RAW DF name
+       default_DF_name = "ISO 11904-2 DF",           // Default RAW DF name
        dfBaseline = true,                           // If true, DF is used as baseline when custom df tilt is on
        default_bass_shelf = 0,                      // Default Custom DF bass shelf value
        default_tilt = -1.0,                         // Default Custom DF tilt value
        default_ear = 0,                             // Default Custom DF ear gain value
        default_treble = 0,                          // Default Custom DF treble gain value
-       tiltableTargets = ["Diffuse Field"];         // Targets that are allowed to be tilted
+       tiltableTargets = ["ISO 11904-2 DF"];         // Targets that are allowed to be tilted
 
 
 // *************************************************************

@@ -10,6 +10,16 @@
         ]
     },
     {
+        "name": "HZSound",
+        "phones": [
+            {
+                "name": "Bell Rhyme",
+                "file": ["HZSound Bell Rhyme"],
+                "suffix":[""]
+            }
+        ]
+    },
+    {
         "name": "NiceHCK",
         "phones": [
             {
@@ -20,11 +30,31 @@
         ]
     },
     {
+        "name": "TGXear",
+        "phones": [
+            {
+                "name": "Serratus",
+                "file": ["TGXear Serratus"],
+                "suffix":[""]
+            }
+        ]
+    },
+    {
         "name": "Valphonics",
         "phones": [
             {
                 "name": "Valbuds V3",
                 "file": ["Valphonics Valbuds"],
+                "suffix":[""]
+            }
+        ]
+    },
+    {
+        "name": "Venture Electronics",
+        "phones": [
+            {
+                "name": "Monk Plus",
+                "file": ["VE Monk Plus"],
                 "suffix":[""]
             }
         ]

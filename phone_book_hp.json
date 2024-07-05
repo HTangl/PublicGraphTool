@@ -1,2 +1,72 @@
 [
+    {
+        "name": "Audeze",
+        "phones": [
+            {
+                "name": "Maxwell",
+                "file": ["Audeze Maxwell (WC Pads)"],
+                "suffix":["(WC Pads)"]
+            }
+        ]
+    },
+    {
+        "name": "Capra Audio",
+        "phones": [
+            {
+                "name": "Satyr 1",
+                "file": ["Capra Audio Satyr 1"],
+                "suffix":[""]
+            }
+        ]
+    },
+    {
+        "name": "Koss",
+        "phones": [
+            {
+                "name": "KSC75",
+                "file": ["Koss KSC75 (PE Headand)"],
+                "suffix":["(PE Headand)"]
+            }
+        ]
+    },
+    {
+        "name": "Philphone",
+        "phones": [
+            {
+                "name": "Closed",
+                "file": ["Philphone Closed"],
+                "suffix":[""]
+            }
+        ]
+    },
+    {
+        "name": "Sennheiser",
+        "phones": [
+            {
+                "name": "HD 569",
+                "file": ["Sennheiser HD 569"],
+                "suffix":[""]
+            }
+        ]
+    },
+    {
+        "name": "Sennheiser",
+        "phones": [
+            {
+                "name": "HD 6XX",
+                "file": ["Sennheiser HD 6XX"],
+                "suffix":[""]
+            }
+        ]
+    },
+    {
+        "name": "Sony",
+        "phones": [
+            {
+                "name": "MDR XB-500",
+                "file": ["Sony MDR XB-500"],
+                "suffix":[""]
+            }
+        ]
+    }
 ]

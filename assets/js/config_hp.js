@@ -1,8 +1,8 @@
 // Configuration options
 const init_phones = [],// Optional. Which graphs to display on initial load. Note: Share URLs will override this set
-      DIR = "data/",                                // Directory where graph files are stored
+      DIR = "data_hp/",                                // Directory where graph files are stored
       default_channels = ["L","R"],                 // Which channels to display. Avoid javascript errors if loading just one channel per phone
-      num_samples = 5,
+      num_samples = 8,
       default_normalization = "dB",                 // Sets default graph normalization mode. Accepts "dB" or "Hz"
       default_norm_db = 60,                         // Sets default dB normalization point
       default_norm_hz = 1000,                        // Sets default Hz normalization point (500Hz is recommended by IEC)
@@ -37,12 +37,12 @@ const init_phones = [],// Optional. Which graphs to display on initial load. Not
 
 // Specify which targets to display
 const targets = [
-    { files:["Generic JM-1 10dB", "Hadoe 711 IEM"] }
+    { type:"Reference", files:["KB500X 10db", "Hadoe KB500X"] }
 ];
 
 // Haruto's Addons
 const  preference_bounds = "assets/images/bounds.png", // Preference bounds image
-       PHONE_BOOK = "phone_book.json",              // Path to phone book JSON file
+       PHONE_BOOK = "phone_book_hp.json",              // Path to phone book JSON file
        default_DF_name = "Diffuse Field",           // Default RAW DF name
        dfBaseline = true,                           // If true, DF is used as baseline when custom df tilt is on
        default_bass_shelf = 0,                      // Default Custom DF bass shelf value

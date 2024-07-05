@@ -37,7 +37,7 @@ const init_phones = [],// Optional. Which graphs to display on initial load. Not
 
 // Specify which targets to display
 const targets = [
-    { type:"Reference", files:["10dB DF KB500x", "Generic JM-1 10dB"] },
+    { type:"Reference", files:["ISO 11904-2 10db", "ISO 11904-2 10db -3EG"] },
 ];
 
 // Haruto's Addons

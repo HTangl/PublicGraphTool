@@ -1,5 +1,5 @@
 // Configuration options
-const init_phones = ["Generic JM-1 10dB Target", "Nightjar Singularity (Divinus Velvet)"],// Optional. Which graphs to display on initial load. Note: Share URLs will override this set
+const init_phones = ["JM-1 10db Target", "Nightjar Singularity (Divinus Velvet)"],// Optional. Which graphs to display on initial load. Note: Share URLs will override this set
       DIR = "data/",                                // Directory where graph files are stored
       default_channels = ["L","R"],                 // Which channels to display. Avoid javascript errors if loading just one channel per phone
       default_normalization = "dB",                 // Sets default graph normalization mode. Accepts "dB" or "Hz"
@@ -36,7 +36,7 @@ const init_phones = ["Generic JM-1 10dB Target", "Nightjar Singularity (Divinus 
 
 // Specify which targets to display
 const targets = [
-    { type:"Reference", files:["Generic JM-1 10dB", "Hadoe 711 IEM"] },
+    { type:"Reference", files:["JM-1 10db", "Hadoe"] },
 ];
 
 // Haruto's Addons

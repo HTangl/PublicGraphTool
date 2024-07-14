@@ -124,6 +124,16 @@
                 "reviewScore": "2/5"
             }
         ]
+    },
+    {
+        "name": "Tripowin",
+        "phones": [
+            {
+                "name": "Mele",
+                "file": ["Tripowin x HBB Mele (AET07)"],
+                "suffix":["(AET07)"]
+            }
+        ]
     }
 
 ]
